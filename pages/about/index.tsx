@@ -8,7 +8,7 @@ const index = () => {
           About
         </h1>
         <p className='text-lg lg:text-xl text-gray-400'>
-          Eurosia Group is the largest B2B Brand tech company providing brand partners with a single dashboard to search, compare &amp; Real Estate, Technology, Restaurant, Hotels, Travels Agency, food, home appliances Newspaper and Agro bees.
+          Eurosia Group is the largest B2B Brand tech company providing brand partners with a single dashboard to search, compare  Real Estate, Technology, Restaurant, Hotels, Travels Agency, food, home appliances Newspaper and Agro bees.
         </p>
       </section>
 
@@ -17,8 +17,7 @@ const index = () => {
           History
         </h2>
         <p className='text-lg lg:text-xl text-gray-400 mb-4'>
-          Eurosia Group is the largest B2B Brand tech company providing brand partners with a single dashboard to search, compare &amp; Real Estate, Technology, Restaurant, Hotels, Travels Agency, food, home appliances Newspaper and Agro bees. Eurosia Group Sister concern of Eurosia Holdings Limited is the largest B2B Brand Tech company providing brand partners with a single dashboard to search, compare &amp; Real Estate, Luxury Apartments, commercial flat sale. So no more thinking, I think that it is the turn to fulfill the dream. Eurosia Technologies Limited Sister concern of Eurosia Group. Eurosia Technologies Limited is the largest B2B Brand Tech company providing brand partners with a single dashboard to search, compare &amp; Technologies, software, Advertising Agency, Brand Promotion Creator, Digital Multimedia Agency And IT Training Center. We make sure and we call to again we make a Digital Bangladesh. Eurosia Group sister concern of Eurosia Restaurant Limited. Eurosia Restaurant is born is 19 November. Eurosia Restaurant Limited is the largest B2B Brand Tech company providing brand partners with a single dashboard to search, compare &amp; Restaurant, Luxury Hotels, food, and party center. Welcome to our Eurosia Restaurant. Our Best Achievement, Healthy food, Stylish Interior, Good Environment, Large Menu, Good Wine list, Big Dining and Creative Cuisine. Indian cuisine, Chinese and Creative unique food.
-        </p>
+          Eurosia Group is the largest B2B Brand tech company providing brand partners with a single dashboard to search, compare, Real Estate, Technology, Restaurant, Hotels, Travels Agency, food, 
       </section>
 
       <section className='mb-12'>
@@ -31,7 +30,7 @@ const index = () => {
       </section>
 
       <section className='mb-12 text-center'>
-        <img src='/images/tm-logo.png' alt='Our Logo' className='mx-auto mb-8' />
+    
         <h2 className='text-3xl lg:text-4xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#eaaaff] via-[#b5acff] to-[#b5acff]'>
           Our Logo
         </h2>
