@@ -1,4 +1,5 @@
 import { Disclosure } from '@headlessui/react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
@@ -37,7 +38,11 @@ function classNames(...classes: string[]) {
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
 
+    const handleContactClick = () => {
+        router.push('/contact');
+    };
     return (
         <Disclosure as="nav" className="navbar">
             <>
@@ -75,7 +80,7 @@ const Navbar = () => {
                                                 {item.name}
                                             </Link>
                                             {item.dropdownItems && (
-                                                <div className="absolute top-full left-0 hidden group-hover:block bg-gray-900 rounded-md shadow-lg py-2 w-48 z-10">
+                                                <div className="absolute top-full left-0 hidden group-hover:block bg-black rounded-md shadow-lg py-2 w-48 z-10">
                                                     {item.dropdownItems.map((subItem) => (
                                                         <Link
                                                             key={subItem.name}
@@ -91,7 +96,13 @@ const Navbar = () => {
                                     ))}
                                 </div>
                             </div>
-                            <button className='hidden lg:flex justify-end text-xl font-semibold py-4 px-6 lg:px-12 navbutton text-white'>Connect</button>
+                            <button 
+                        className='hidden lg:flex justify-end text-xl font-semibold py-4 px-6 lg:px-12 navbutton text-white'
+                        onClick={handleContactClick}
+                    >
+                        Contact
+                    </button>
+
                         </div>
                         <div className='block lg:hidden'>
                             <Bars3Icon className="block h-6 w-6 text-white" aria-hidden="true" onClick={() => setIsOpen(true)} />

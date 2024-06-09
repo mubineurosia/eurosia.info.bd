@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ContactForm from '@/components/Contact';
 const Ourstory = () => {
   return (
     <div className='bg-[#252525] text-white font-Poppins container mx-auto px-6 py-16'>
@@ -61,7 +61,10 @@ const Ourstory = () => {
           </div>
         </div>
       </section>
+      <ContactForm />
     </div>
+
+    
   );
 };
 

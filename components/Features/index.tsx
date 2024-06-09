@@ -1,14 +1,18 @@
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-
-interface featuresdata {
+interface FeaturesData {
     imgSrc: string;
     heading: string;
     subheading: string;
     price: string;
 }
 
-const featuresdata: featuresdata[] = [
+const featuresData: FeaturesData[] = [
     {
         imgSrc: '/images/Features/featureOne.svg',
         heading: 'School Management',
@@ -19,17 +23,21 @@ const featuresdata: featuresdata[] = [
         imgSrc: '/images/Features/featureTwo.svg',
         heading: 'Free to use',
         price: '৳25000.00',
-        subheading: 'Top notch crypto portfolio traking at no cost',
+        subheading: 'Top notch crypto portfolio tracking at no cost',
     },
-
     {
         imgSrc: '/images/Features/featureThree.svg',
         heading: 'Real-time price data',
         price: '৳25000.00',
-        subheading: 'Updating 24/7 using price data form the biggest exchanges',
+        subheading: 'Updating 24/7 using price data from the biggest exchanges',
     },
-
-]
+    {
+        imgSrc: '/images/Features/featureThree.svg',
+        heading: 'Real-time price data',
+        price: '৳25000.00',
+        subheading: 'Updating 24/7 using price data from the biggest exchanges',
+    },
+];
 
 const Features = () => {
     return (
@@ -39,27 +47,44 @@ const Features = () => {
                 {/* Column-1 */}
                 <div>
                     <h3 className="feature-font text-lg font-semibold mb-4 text-center md:text-start">Packages</h3>
-                    <h2 className="text-offwhite text-3xl lg:text-5xl font-semibold leading-snug mb-6 text-center md:text-start">Choose a package which suits you best</h2>
-{/*                     <p className="lg:text-lg font-normal text-bluish text-center md:text-start">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s.</p> */}
+                    <h2 className="text-offwhite text-3xl lg:text-5xl font-semibold leading-snug mb-6 text-center md:text-start">
+                        Choose a package which suits you best
+                    </h2>
                 </div>
                 {/* Column-2 */}
                 <div>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4 lg:-mr-56">
-                        {featuresdata.map((items, i) => (
-                            <div className="bg-blue py-10 pr-12 pl-6 rounded-lg" key={i}>
-                                <div className="rounded-full gg h-16 w-16 flex items-center justify-center mb-10">
-                                    <Image src={items.imgSrc} alt={items.imgSrc} width={24} height={30} />
+                    <Swiper
+                        modules={[Navigation, Pagination]}
+                        spaceBetween={30}
+                        slidesPerView={1}
+                        breakpoints={{
+                            640: { slidesPerView: 1 },
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 2 },
+                        }}
+                        pagination={{ clickable: true }}
+                        navigation
+                        className="swiper-container"
+                    >
+                        {featuresData.map((item, i) => (
+                            <SwiperSlide key={i}>
+                                <div className="bg-blue py-10 pr-12 pl-6 rounded-lg">
+                                    <div className="rounded-full gg h-16 w-16 flex items-center justify-center mb-10">
+                                        <Image src={item.imgSrc} alt={item.imgSrc} width={24} height={30} />
+                                    </div>
+                                    <h5 className="text-offwhite text-lg font-medium mb-4">{item.heading}</h5>
+                                    <h4 className="text-red text-lg font-normal ">{item.price}</h4>
+                                    <p className="text-lightblue text-sm font-normal">{item.subheading}</p>
                                 </div>
-                                <h5 className="text-offwhite text-lg font-medium mb-4">{items.heading}</h5>
-                                <h4 className="text-red text-lg font-normal ">{items.price}</h4>
-                                <p className="text-lightblue text-sm font-normal">{items.subheading}</p>
-                            </div>
+                            </SwiperSlide>
                         ))}
-                    </div>
+                        <div className="swiper-button-prev"></div>
+                        <div className="swiper-button-next"></div>
+                    </Swiper>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Features;

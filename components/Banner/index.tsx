@@ -24,7 +24,7 @@ const Banner = ({ title, description , leftImage }: BannerProps) => {
           <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
             <div className='arrowTwo'></div>
             <div className='col-span-7'>
-              <h1 className="text-4xl lg:text-7xl font-bold mb-5 text-white md:4px md:text-start text-center">
+              <h1 className="text-4xl lg:text-7xl font-bold mb-5 hadding-bg-color md:4px md:text-start text-center">
                 {title} <br />
               </h1>
               <p className='text-white md:text-lg font-normal mb-10 md:text-start text-center'>{description}</p>
@@ -37,11 +37,11 @@ const Banner = ({ title, description , leftImage }: BannerProps) => {
               </div>
             </div>
 
-            <div className='col-span-5 lg:-m-48'>
+            <div className='col-span-5 '>
               <div className='arrowThree'></div>
               <div className='arrowFour'></div>
               <div className='arrowFive'></div>
-              {/* <Image className='' src='/images/Banner/banner.svg' alt='nothing' width={750} height={300} /> */}
+              <Image className='' src='/images/Banner/banner11.png' alt='nothing' width={750} height={300} />
               <div className='arrowSix'></div>
               <div className='arrowSeven'></div>
               <div className='arrowEight'></div>
