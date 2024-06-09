@@ -1,6 +1,7 @@
 import React from 'react';
-import ContactForm from '@/components/Contact';
-const Ourstory = () => {
+import Image from 'next/image';
+
+const Index = () => {
   return (
     <div className='bg-[#252525] text-white font-Poppins container mx-auto px-6 py-16'>
       <section className='mb-16 text-center'>
@@ -26,12 +27,12 @@ const Ourstory = () => {
           Who we are!
         </h2>
         <p className='text-lg lg:text-xl text-gray-400'>
-          A powerful portfolio of the country’s most distinctive and selective developments, with an excellent reputation in the Real Estate market, and enviable relationships that give our clients exclusive access to the ultimate in luxury apartments and exquisite commercial spaces, all in prime locations of Dhaka city. Our promise remains to develop a portfolio of luxury spaces and offer investors as well as buyers an unparalleled quality of service, inimitable by competitors. It is the commitment to both impeccably high standards and attention to detail that drive us to our success. Besides building beyond expectation, Eurosia Group moreover sets standards for itself, for you and for others, which is why we proudly declare our driving philosophy to be "Setting Standards".
+          A powerful portfolio of the country’s most distinctive and selective developments, with an excellent reputation in the Real Estate market, and enviable relationships that give our clients exclusive access to the ultimate in luxury apartments and exquisite commercial spaces, all in prime locations of Dhaka city. Our promise remains to develop a portfolio of luxury spaces and offer investors as well as buyers an unparalleled quality of service, inimitable by competitors. It is the commitment to both impeccably high standards and attention to detail that drive us to our success. Besides building beyond expectation, Eurosia Group moreover sets standards for itself, for you and for others, which is why we proudly declare our driving philosophy to be &quot;Setting Standards&quot;.
         </p>
       </section>
 
       <section className='mb-12 text-center'>
-        <img src='/images/tm-logo.png' alt='Our Logo' className='mx-auto mb-8' />
+        <Image src='/images/tm-logo.png' alt='Our Logo' width={500} height={500} className='mx-auto mb-8' />
         <h2 className='text-3xl lg:text-4xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#eaaaff] via-[#b5acff] to-[#b5acff]'>
           Our Logo
         </h2>
@@ -61,11 +62,10 @@ const Ourstory = () => {
           </div>
         </div>
       </section>
-      <ContactForm />
     </div>
 
     
   );
 };
 
-export default Ourstory;
+export default Index;
