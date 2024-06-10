@@ -29,7 +29,23 @@ const navigation: NavigationItem[] = [
         ]
     },
     { name: 'Features', href: '#features-section', current: false },
-    { name: 'FAQ', href: '#faq-section', current: false },
+
+    { 
+        name: 'Our Company', 
+        href: '/ourcompany/', 
+        current: false,
+        dropdownItems: [
+            { name: 'Eurosia Technologies ', href: '/ourcompany/eurosiatechnologies', current: false },
+            { name: 'Vision & Mission', href: '/about/vision-mission', current: false },
+            { name: 'Board of Directors', href: '/about/board-of-directors', current: false },
+            { name: 'Management Team', href: '/about/management-team', current: false },
+            { name: 'Companies', href: '/about/companies', current: false }
+        ]
+    },
+
+
+
+
 ];
 
 function classNames(...classes: string[]) {
@@ -80,7 +96,7 @@ const Navbar = () => {
                                                 {item.name}
                                             </Link>
                                             {item.dropdownItems && (
-                                                <div className="absolute top-full left-0 hidden group-hover:block bg-black rounded-md shadow-lg py-2 w-48 z-10">
+                                                <div className="absolute top-full left-0 hidden group-hover:block bg-black rounded-md shadow-lg py-2 w-52 z-10">
                                                     {item.dropdownItems.map((subItem) => (
                                                         <Link
                                                             key={subItem.name}

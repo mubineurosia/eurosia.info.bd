@@ -1,139 +1,89 @@
-import { useState } from 'react';
+// components/ContactForm.tsx
+import { useState, ChangeEvent, FormEvent } from 'react'
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted');
-  };
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    // Handle form submission
+    console.log('Form data:', formData)
+  }
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label className="label" htmlFor="name">
-            Name
-          </label>
-          <input
-            className="input"
-            id="name"
-            type="text"
-            placeholder="Enter your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label className="label" htmlFor="email">
-            Email
-          </label>
-          <input
-            className="input"
-            id="email"
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <label className="label" htmlFor="message">
-            Message
-          </label>
-          <textarea
-            className="textarea"
-            id="message"
-            placeholder="Enter your message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </div>
-        <div className="form-group">
-          <button className="submit-button" type="submit">
-            Submit
-          </button>
-        </div>
-      </form>
-
-      <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-        @import "slick-carousel/slick/slick.css";
-        @import "slick-carousel/slick/slick-theme.css";
-
-        body {
-          font-family: 'Poppins', sans-serif;
-        }
-
-        .flex {
-          display: flex;
-        }
-
-        .justify-center {
-          justify-content: center;
-        }
-
-        .items-center {
-          align-items: center;
-        }
-
-        .h-screen {
-          height: 100vh;
-        }
-
-        .contact-form {
-          // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          border-radius: 8px;
-          padding: 16px;
-          margin-bottom: 20px;
-          width: 400px;
-          background-color: #f1f1f1; /* Background color for the form section */
-        }
-
-        .form-group {
-          margin-bottom: 16px;
-        }
-
-        .label {
-          display: block;
-          font-weight: bold;
-          color: #000;
-          margin-bottom: 8px;
-        }
-
-        .input,
-        .textarea {
-          width: 100%;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          font-size: 14px;
-          outline: none;
-        }
-
-        .textarea {
-          resize: vertical;
-        }
-
-        .submit-button {
-          background-color: #3490dc;
-          color: #fff;
-          font-weight: bold;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-
-        .submit-button:hover {
-          background-color: #2779bd;
-        }
-      `}</style>
+    <div className="bg-black text-black py-16">
+      <div className="max-w-3xl text-white mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-extrabold text-center mb-12">Contact Us</h2>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-white">
+              Name
+            </label>
+            <div className="mt-1">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="block w-full px-4 py-2 bg-gray-900  border border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+              />
+            </div>
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-white">
+              Email
+            </label>
+            <div className="mt-1">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="block w-full px-4 py-2 bg-gray-900  border border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+              />
+            </div>
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-white">
+              Message
+            </label>
+            <div className="mt-1">
+              <textarea
+                name="message"
+                id="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={4} // This should be a number
+                className="block w-full px-4 py-2 bg-gray-900  border border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+              ></textarea>
+            </div>
+          </div>
+          <div>
+            <button
+              type="submit"
+              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-black bg-white hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm
