@@ -21,11 +21,11 @@ const navigation: NavigationItem[] = [
         href: 'about', 
         current: false,
         dropdownItems: [
-            { name: 'Our Story', href: '/about/our-story', current: false },
+    
             { name: 'Vision & Mission', href: '/about/vision-mission', current: false },
             { name: 'Board of Directors', href: '/about/board-of-directors', current: false },
             { name: 'Management Team', href: '/about/management-team', current: false },
-            { name: 'Companies', href: '/about/companies', current: false }
+        
         ]
     },
     { name: 'Features', href: '#features-section', current: false },
@@ -39,7 +39,7 @@ const navigation: NavigationItem[] = [
             { name: 'Vision & Mission', href: '/about/vision-mission', current: false },
             { name: 'Board of Directors', href: '/about/board-of-directors', current: false },
             { name: 'Management Team', href: '/about/management-team', current: false },
-            { name: 'Companies', href: '/about/companies', current: false }
+          
         ]
     },
 
