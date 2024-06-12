@@ -37,15 +37,51 @@ const teamMembers = [
     office: "",
     imageUrl: "/images/Managementteam/moinul.png",
   },
+  {
+    name: 'Eng. Mehadi Hasan',
+    role: 'BSC. in CSE Eurosia Technologies Limited',
+    imageUrl: '/images/Managementteam/mehadi.jpg',
+  },
+  
+  {
+    name: 'Eng. Kazi Ramjan Ali',
+    role: 'BSC. in CSE Eurosia Technologies Limited',
+    imageUrl: '/images/Managementteam/Ramjan.jpg',
+  },
+  {
+    name: 'Md. Raziul Islam Ashiki',
+    role: 'Motion Graphics Designer Eurosia Technologies Limited',
+    imageUrl: '/images/Managementteam/Ashik.jpg',
+  },
+  {
+    name: 'Maksudul Islam',
+    role: 'SEO Executive Eurosia Technologies Limited',
+    imageUrl: '/images/Managementteam/Maksudul.jpg',
+  },
+  
+  {
+    name: 'Khadiza Akter',
+    role: 'Graphic Designer Eurosia Technologies Limited',
+    imageUrl: '/images/Managementteam/Khadiza.jpg',
+  },
+  {
+    name: 'Md. Abir Hossain',
+    role: 'Sales Executive Eurosia Technologies Limited',
+    imageUrl: '/images/Managementteam/Abir.jpg',
+  },
 ];
 
 const TeamSection = () => {
   return (
     <section className="mb-12">
-      <h2 className="text-3xl lg:text-4xl font-semibold my-10 mb-8 text-center">
+
+         {/* Hero Section */}
+         <section className="text-center container py-10 mb-16 bg-black bg-opacity-50 rounded-lg shadow-lg mx-auto px-6 py-16">
+        <h1 className="text-4xl lg:text-6xl font-bold my-8 bg-clip-text text-transparent bg-gradient-to-r from-[#eaaaff] via-[#b5acff] to-[#b5acff]">
         Our Team
-      </h2>
-      <div className="flex flex-wrap justify-center">
+        </h1>
+    </section>
+      <div className="flex flex-wrap justify-center container mx-auto">
         {teamMembers.map((member, index) => (
           <div
             key={index}

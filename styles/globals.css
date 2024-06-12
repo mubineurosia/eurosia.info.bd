@@ -16,9 +16,6 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-color);
-/*  background-image: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%); 
- background-image: linear-gradient(90deg, rgba(189, 36, 223, 0.5) 0%, rgba(45, 106, 222, 0.5) 97.15%);  */
-
   background-blend-mode: overlay;
 }
 
@@ -510,27 +507,6 @@ th:last-child {
   filter: sepia(0%);
 }
 
-/* adding border  */
-
-/* .custom_border::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #ffee10;
-  transition: .5s;
-  transform: scale(.9);
-  z-index: -1;
-  padding: 50px 10px;
-}
-
-.custom_border::before {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #ffee10;
-} */
 
 .custom_border:hover {
   color: #ffee10;
@@ -571,47 +547,6 @@ box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 
             transform: rotate(360deg);
   }
 }
-
-
-/* text animation  */
-
-/* .text-pop-up-tl {
-	-webkit-animation: text-pop-up-tl 10s ease-out 2 both;
-	        animation: text-pop-up-tl 10s ease-out 2 both;
-}
-
-@-webkit-keyframes text-pop-up-tl {
-  0% {
-    -webkit-transform: translateY(0) translateX(0);
-            transform: translateY(0) translateX(0);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    text-shadow: none;
-  }
-  100% {
-    -webkit-transform: translateY(-50px) translateX(-50px);
-            transform: translateY(-50px) translateX(-50px);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-  }
-}
-@keyframes text-pop-up-tl {
-  0% {
-    -webkit-transform: translateY(0) translateX(0);
-            transform: translateY(0) translateX(0);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    text-shadow: none;
-  }
-  100% {
-    -webkit-transform: translateY(-50px) translateX(-50px);
-            transform: translateY(-50px) translateX(-50px);
-    -webkit-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
-  }
-} */
 
 
 
@@ -721,3 +656,90 @@ box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 
  ******************/
 
 
+
+ .border-red-line::before {
+  content: '';
+  position: absolute;
+  background: red;
+  height: 2px;
+  width: 396px;
+  right: -112px;
+}
+
+.border-blue-line::before {
+  content: '';
+  position: absolute;
+  background: #000033;
+  height: 2px;
+  width: 290px;
+  top: -140px;
+  right: 22px;
+}
+
+.border-red-line::after {
+  content: '';
+  position: absolute;
+  background: red;
+  height: 303px;
+  width: 2px;
+  top: 2px;
+  right: -112px;
+}
+.border-blue-line::after {
+  content: '';
+  position: absolute;
+  background: #000033;
+  height: 150px;
+  width: 2px;
+  top: -140px;
+  right: 22px;
+}
+
+
+
+/* Define the animation keyframes */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Apply the animated gradient background to the desired element */
+#logo-description {
+
+ 
+  background: linear-gradient(45deg, #2c003e, #4b0082, #800080, #2c003e);
+  animation: gradientAnimation 10s ease infinite;
+  padding: 40px;
+
+
+}
+
+
+.our_logo{
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(45deg, #2c003e, #4b0082, #800080, #2c003e);
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
+  
+  color: white;
+  font-family: Arial, sans-serif;
+
+}
+
+
+.client-logo {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}

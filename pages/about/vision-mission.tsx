@@ -11,7 +11,16 @@ const VisionMission = () => {
 
       <main className="bg-black text-white py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-extrabold text-center text-white mb-12">About</h1>
+      {/* Hero Section */}
+      <section className="text-center container py-10 mb-16 bg-black bg-opacity-50 rounded-lg shadow-lg mx-auto px-6 py-16">
+        <h1 className="text-4xl lg:text-6xl font-bold my-8 bg-clip-text text-transparent bg-gradient-to-r from-[#eaaaff] via-[#b5acff] to-[#b5acff]">
+        Vision & Mission
+        </h1>
+        <p className="text-lg lg:text-xl text-gray-400">
+          Eurosia Group is the largest B2B Brand tech company providing brand partners with a single dashboard to search, compare & Real Estate, Technology, Restaurant, Hotels, Travels Agency, food, home appliances Newspaper and Agro bees.
+        </p>
+      </section>
+      {/* History Section */}
           
           <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="custom_border p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">

@@ -43,36 +43,31 @@ const tableData: table[] = [
     },
     {
         index: 4,
-        imgSrc: '/images/OurCompany/blue-4.png',
+        imgSrc: '/images/OurCompany/app.png',
         Weblink:""
        
     },
-    {
-        index: 4,
-        imgSrc: '/images/OurCompany/blue-4.png',
-        Weblink:""
-       
-    },
-    {
-        index: 4,
-        imgSrc: '/images/OurCompany/blue-4.png',
-        Weblink:""
-       
-    },
+
 
 ]
 
 const OurConpany = () => {
     return (     
         <>
-<div className='mx-auto max-w-7xl pt-40 px-6' id="exchange-section">
+      <section className="text-center container py-10 mb-16 bg-black bg-opacity-50 rounded-lg shadow-lg mx-auto px-6 py-16">
+        <h1 className="text-4xl lg:text-6xl font-bold my-8 bg-clip-text text-transparent bg-gradient-to-r from-[#eaaaff] via-[#b5acff] to-[#b5acff]">
+        Our Company
+        </h1>
+    </section>
+<div className='mx-auto max-w-7xl pt-10 px-6' id="exchange-section">
     <div className="p-8 overflow-x-auto"> 
-        <h3 className="text-white text-4xl text-center">Our Company</h3>
-        <div className="flex flex-wrap justify-center mt-10 space-x-4">
+                           {/* Hero Section */}
+
+        <div className="flex flex-wrap justify-center mt-10 space-x-4 ">
             {tableData.map((item, i) => (
-                <div key={i} className="flex-none pro-panel mx-5 my-4 shadow-md company_logo">
+                <div key={i} className="flex-none pro-panel mx-5 my-4 shadow-md client-logo company_logo">
                     <a href={item.Weblink} className="" target="__blank">
-                        <Image src={item.imgSrc} alt={`Image ${item.index}`} height={400} width={250} className="" />
+                        <Image src={item.imgSrc} alt={`Image ${item.index}`} height={100} width={300} className="" />
                     </a>
                 </div>
             ))}

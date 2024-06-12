@@ -27,13 +27,21 @@ const teamMembers = [
     position: 'Director(Business Management), UK',
     imageUrl: '/images/BordTeam/sujon.png',
   },
+
   
 ]
 
 const Team = () => {
   return (
-    <div className="bg-black text-white py-12 min-h-screen">
-      <h2 className="text-5xl font-bold text-center my-20 mb-10">Board Of Directors </h2>
+    <div className=" text-white py-12 min-h-screen container mx-auto">
+
+            {/* Hero Section */}
+      <section className="text-center container py-10 mb-16 bg-black bg-opacity-50 rounded-lg shadow-lg mx-auto px-6 py-16">
+        <h1 className="text-4xl lg:text-6xl font-bold my-8 bg-clip-text text-transparent bg-gradient-to-r from-[#eaaaff] via-[#b5acff] to-[#b5acff]">
+        Board Of Directors 
+        </h1>
+    </section>
+    
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 sm:px-6 lg:px-8">
         {teamMembers.map((member) => (
           <div key={member.name} className="text-center custom_border py-5">

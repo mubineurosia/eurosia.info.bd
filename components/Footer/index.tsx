@@ -22,7 +22,7 @@ const products: ProductType[] = [
   {
     id: 1,
     section: "Useful Links",
-    link: ['Home', 'Exchange', 'Features', 'FAQ'],
+    link: ['about', 'Exchange', 'vision-mission', 'management-team'],
   }
 ];
 
