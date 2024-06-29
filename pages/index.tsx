@@ -10,7 +10,7 @@ import Trade from '../components/Trade/index';
 import Faq from '../components/Faq/index';
 import Footer from '../components/Footer/index';
 import ContactForm from '@/components/Contact';
-
+import ThemeToggle from '../components/ThemeToggle'
 export default function Home() {
   return (
     <>
@@ -21,8 +21,9 @@ export default function Home() {
         <link rel="icon" href="fav.png" />
       </Head>
       <main>
+      
        {/*  <Navbar /> */}
-        <Banner title='Welcome to Eurosia ' description='We are a leading IT company that specializes in custom software development and digital solutions. Our team of experts can help you streamline your processes, improve your online presence, and boost your bottom line.' leftImage=''/>
+        <Banner title='Welcome to Eurosia' description='Eurosia | ইউরোশিয়া , we strive to provide exceptional service and innovation across various sectors including Real Estate, Technologies, Restaurants, Hotels, Travel Agencies, Food, Home Appliances, Newspapers, and Agro-businesses. Our mission is to empower brand partners with a unified dashboard for seamless searching, comparing, and managing their operations. We are committed to delivering reliable solutions and enhancing efficiency in every aspect of our clients business ventures.' leftImage=''/>
         {/* <Companies /> */}
         <Work />
         {/* <Table /> */}

@@ -58,7 +58,7 @@ const footer = () => {
               height={40} 
             />
             <h3 className='text-lightblue text-sm font-normal leading-9 mb-4 lg:mb-16'>
-              Eurosia Technologies Limited is an ITES company that provides technology-related services worldwide. We are one of the best digital marketing agencies in Bangladesh.
+            Eurosia | ইউরোশিয়া: We provide innovative, reliable solutions across multiple sectors with a unified dashboard for seamless business operations.
             </h3>
             <div className='flex gap-4'>
               {socialLinks.map((items, i) => (
@@ -89,7 +89,7 @@ const footer = () => {
             <div className="gap-4 mb-3">
               {memberImages.map((member, i) => (
                 <Link target="_blank" href={member.href} key={i}>
-                  <Image src={member.imgsrc} alt={`member-${i}`} className='member-icons mb-2' width={100} height={100}/>
+                  <Image src={member.imgsrc} alt={`member-${i}`} className='member-icons mb-2 bg-white' width={100} height={100}/>
                 </Link>
               ))}
             </div>
@@ -97,9 +97,26 @@ const footer = () => {
 
           <div className="col-span-2">
             <h3 className="text-white text-xl font-medium mb-9">Contact Us</h3>
+
             <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
               <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
               (+88) 01709371514
+            </h4>
+            <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
+              <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
+              (+88) 01711-408724
+            </h4>
+            <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
+              <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
+              (+88) 01711-408725
+            </h4>
+            <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
+              <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
+             Fax# (+880) 8715960
+            </h4>
+            <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
+              <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
+             Tell# (+880) 8711849
             </h4>
             <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
               <Image src={'/images/Footer/email.svg'} alt="email-icon" width={20} height={20} />
@@ -107,8 +124,11 @@ const footer = () => {
             </h4>
             <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
               <Image src={'/images/Footer/address.svg'} alt="address-icon" width={20} height={20} />
-              Dhaka, Bangladesh
+              Eurosia,144/5G, Matikata, (Near By ECB Circle)
+              Dhaka-1206, Bangladesh
             </h4>
+
+     
           </div>
 
         </div>
@@ -117,7 +137,7 @@ const footer = () => {
       {/* All Rights Reserved */}
       <div className='py-8 px-4 border-t border-t-lightblue'>
         <h3 className='text-center text-offwhite'>
-          @2023 - All Rights Reserved by <Link href="https://eurosiatechnologies.com/" target="_blank">Eurosiatechnologies.com</Link>
+          @2023 - All Rights Reserved by <Link href="https://eurosiatechnologies.com/" target="_blank">Eurosia Limited</Link>
         </h3>
       </div>
     </div>

@@ -6,7 +6,7 @@ const VisionMission = () => {
     <div>
       <Head>
         <title>Vision and Mission | Eurosia Group</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/fav.png" />
       </Head>
 
       <main className="bg-black text-white py-16">

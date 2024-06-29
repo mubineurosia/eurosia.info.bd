@@ -62,7 +62,7 @@ const Work = () => {
                 <div className="radial-bgone hidden lg:block"></div>
                 <div className='text-center mb-14'>
                     <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>How it work</h3>
-                    <p className='text-bluish md:text-lg font-normal leading-8'>Our IT company specializes in helping businesses optimize their technology infrastructure. We provide IT consulting, infrastructure design and implementation, software development, and ongoing IT support. Contact us to learn how we can help your business streamline its operations and reduce costs.</p>
+                    <p className='text-bluish md:text-lg font-normal leading-8'>we specialize in optimizing technologies infrastructure across various sectors including Real Estate, IT consulting, infrastructure design and implementation, software development, and ongoing IT support. We also cater to industries like Restaurants, Agriculture, and Travel. Contact us to discover how we can streamline your business operations and reduce costs.</p>
                 </div>
 
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-5 mt-32'>
