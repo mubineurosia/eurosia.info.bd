@@ -84,7 +84,7 @@ const footer = () => {
           ))}
 
           {/* NEW MEMBER SECTION */}
-          <div className="group relative col-span-3">
+          <div className="group relative col-span-2">
             <p className="text-white text-xl font-medium mb-9">Member</p>
             <div className="gap-4 mb-3">
               {memberImages.map((member, i) => (
@@ -95,7 +95,7 @@ const footer = () => {
             </div>
           </div>
 
-          <div className="col-span-2">
+          <div className="col-span-3">
             <h3 className="text-white text-xl font-medium mb-9">Contact Us</h3>
 
             <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">

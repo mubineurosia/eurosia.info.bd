@@ -15,6 +15,7 @@ const Banner = ({ title, description , leftImage }: BannerProps) => {
 
   return (
     <div className='bg-image relative' id="home-section">
+      
       <div className='arrowOne'></div>
       <div className='radial-banner hidden lg:block'></div>
       <ModalVideo channel='youtube' isOpen={isOpen} videoId="wgQ58UEY-ME" onClose={() => setOpen(false)} />
@@ -24,13 +25,11 @@ const Banner = ({ title, description , leftImage }: BannerProps) => {
           <div className='grid grid-cols-1 lg:grid-cols-12 my-16'>
             <div className='arrowTwo hidden md:block'></div>
             <div className='col-span-7'>
+            <span className="banner-effect-2"></span>
               <h1  className="text-4xl lg:text-7xl font-bold mb-5  md:4px md:text-start text-center text-pop-up-tl text-white">
                 {title} <br />
               </h1>
-              <p className="{classNames(
-                        item.current ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-300',
-                        'px-3 py-2 rounded-md text-sm font-medium'
-                      )} text-white md:text-lg font-normal mb-10 md:text-start text-center ">{description}</p>
+              <p className="text-white md:text-lg font-normal mb-10 md:text-start text-center ">{description}</p>
               <div className='flex align-middle justify-center md:justify-start'>
                 <button className='text-xl font-semibold text-white py-2 px-6 lg:px-12 navbutton mr-6'>Get Started</button>
                 <button onClick={() => setOpen(true)} className='bg-transparent flex justify-center items-center text-white'>

@@ -9,6 +9,10 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.1.4",
     "@types/node": "18.15.0",

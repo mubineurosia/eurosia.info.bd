@@ -23,7 +23,7 @@ export default function Home() {
       <main>
       
        {/*  <Navbar /> */}
-        <Banner title='Welcome to Eurosia' description='Eurosia | ইউরোশিয়া , we strive to provide exceptional service and innovation across various sectors including Real Estate, Technologies, Restaurants, Hotels, Travel Agencies, Food, Home Appliances, Newspapers, and Agro-businesses. Our mission is to empower brand partners with a unified dashboard for seamless searching, comparing, and managing their operations. We are committed to delivering reliable solutions and enhancing efficiency in every aspect of our clients business ventures.' leftImage=''/>
+        <Banner  title='Welcome to Eurosia' description='Eurosia | ইউরোশিয়া , we strive to provide exceptional service and innovation across various sectors including Real Estate, Technologies, Restaurants, Hotels, Travel Agencies, Food, Home Appliances, Newspapers, and Agro-businesses. Our mission is to empower brand partners with a unified dashboard for seamless searching, comparing, and managing their operations. We are committed to delivering reliable solutions and enhancing efficiency in every aspect of our clients business ventures.' leftImage=''/>
         {/* <Companies /> */}
         <Work />
         {/* <Table /> */}

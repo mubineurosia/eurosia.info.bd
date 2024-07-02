@@ -12,6 +12,14 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
+      background: {
+        light: '#FFFFFF',
+        dark: '#0C1337',
+      },
+      text: {
+        light: '#000000',
+        dark: '#FFFFFF',
+      },
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#ffffff',
