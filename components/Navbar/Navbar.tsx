@@ -95,12 +95,10 @@ const Navbar = () => {
                   {item.dropdownItems && (
                     <div className="absolute top-full left-0 hidden group-hover:block bg-black rounded-md shadow-lg py-2 w-52 z-10">
                       {item.dropdownItems.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block px-4 py-2 text-white hover:bg-gray-700"
-                        >
-                          {subItem.name}
+                        <Link key={subItem.name} href={subItem.href} legacyBehavior>
+                          <a target="_blank" className="block px-4 py-2 text-white hover:bg-gray-700">
+                            {subItem.name}
+                          </a>
                         </Link>
                       ))}
                     </div>
