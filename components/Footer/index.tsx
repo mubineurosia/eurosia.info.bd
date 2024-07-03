@@ -100,24 +100,17 @@ const footer = () => {
 
             <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
               <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
-              (+88) 01709371514
+               01709371514
             </h4>
             <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
               <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
-              (+88) 01711-408724
+              01711-408724
             </h4>
             <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
               <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
-              (+88) 01711-408725
+              01711-408725
             </h4>
-            <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
-              <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
-             Fax# (+880) 8715960
-            </h4>
-            <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
-              <Image src={'/images/Footer/number.svg'} alt="number-icon" width={20} height={20} />
-             Tell# (+880) 8711849
-            </h4>
+
             <h4 className="text-offwhite text-sm font-normal mb-6 flex gap-2">
               <Image src={'/images/Footer/email.svg'} alt="email-icon" width={20} height={20} />
               sales@eurosiatechnologies.com

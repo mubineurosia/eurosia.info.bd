@@ -7,6 +7,7 @@ import Drawer from './Drawer';
 import Drawerdata from './Drawerdata';
 import Image from 'next/image';
 import ThemeToggle from '../ThemeToggle';
+
 interface NavigationItem {
   name: string;
   href: string;
@@ -55,61 +56,60 @@ const Navbar = () => {
 
   return (
     <Disclosure as="nav" className="navbar">
-      <> 
-      
-        <div className="mx-auto max-w-7xl lg:px-8">
+      <>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative flex h-12 sm:h-20 items-center justify-between">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <Image
-                  className="block h-10 w-auto lg:hidden"
-                  src="/images/Logo/logo.gif"
-                  alt="Crypto-Logo"
-                  width={150}
-                  height={40}
-                />
-                <Image
-                  className="hidden h-10 w-auto lg:block"
-                  src="/images/Logo/logo.gif"
-                  alt="Crypto-Logo"
-                  width={180}
-                  height={50}
-                />
+                <Link href="/">
+                  <Image
+                    className="block h-10 w-auto lg:hidden"
+                    src="/images/Logo/logo.gif"
+                    alt="Crypto-Logo"
+                    width={150}
+                    height={40}
+                  />
+                  <Image
+                    className="hidden h-10 w-auto lg:block"
+                    src="/images/Logo/logo.gif"
+                    alt="Crypto-Logo"
+                    width={180}
+                    height={50}
+                  />
+                </Link>
               </div>
             </div>
-            <div className="hidden lg:flex items-center border-right">
-              <div className="flex space-x-4">
-                {navigation.map((item) => (
-                  <div key={item.name} className="relative group">
-                    <Link
-                      href={item.href}
-                      className={classNames(
-                        item.current ? 'bg-gray-900' : 'navlinks text-white hover:text-offwhite hover-underline',
-                        'px-3 py-4 rounded-md text-lg font-normal'
-                      )}
-                      aria-current={item.current ? 'page' : undefined}
-                    >
-                      {item.name}
-                    </Link>
-                    {item.dropdownItems && (
-                      <div className="absolute top-full left-0 hidden group-hover:block bg-black rounded-md shadow-lg py-2 w-52 z-10">
-                        {item.dropdownItems.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-4 py-2 text-white hover:bg-gray-700"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
+            <div className="hidden lg:flex items-center space-x-4">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative group">
+                  <Link
+                    href={item.href}
+                    className={classNames(
+                      item.current ? 'bg-gray-900' : 'navlinks text-white hover:text-offwhite hover-underline',
+                      'px-3 py-2 rounded-md text-lg font-medium'
                     )}
-                  </div>
-                ))}
-              </div>
+                    aria-current={item.current ? 'page' : undefined}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.dropdownItems && (
+                    <div className="absolute top-full left-0 hidden group-hover:block bg-black rounded-md shadow-lg py-2 w-52 z-10">
+                      {item.dropdownItems.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block px-4 py-2 text-white hover:bg-gray-700"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
             <button
-              className="hidden lg:flex justify-end text-xl font-semibold py-4 px-6 lg:px-12 navbutton text-white"
+              className="hidden lg:flex justify-end text-xl font-semibold py-2 px-6 lg:px-8 navbutton text-white"
               onClick={handleContactClick}
             >
               Contact

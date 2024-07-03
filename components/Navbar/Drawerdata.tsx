@@ -41,6 +41,7 @@ function classNames(...classes: string[]) {
 
 const Data: React.FC = () => {
     const [dropdownStates, setDropdownStates] = useState<{ [key: string]: boolean }>({});
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleDropdown = (itemName: string) => {
         setDropdownStates(prevState => ({
@@ -49,48 +50,53 @@ const Data: React.FC = () => {
         }));
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <div className="rounded-md max-w-sm w-full ">
-            <div className="flex-1 space-y-4 py-1">
-                <div className="sm:block">
-                    <div className="space-y-1 px-5 pt-2 pb-3">
-                        {navigation.map((item) => (
-                            <div key={item.name}>
-                                <Link
-                                    href={item.href}
-                                    className={classNames(
-                                        item.current ? 'bg-gray-900 text-purple' : 'text-black hover:bg-gray-700 hover:text-purple',
-                                        'block py-2 rounded-md text-base font-medium'
-                                    )}
-                                    aria-current={item.current ? 'page' : undefined}
-                                    onClick={() => item.dropdownItems && toggleDropdown(item.name)}
-                                >
-                                    {item.name}
-                                </Link>
-                                {item.dropdownItems && dropdownStates[item.name] && (
-                                    <div className="pl-4 space-y-1">
-                                        {item.dropdownItems.map((dropdownItem) => (
-                                            <Link
-                                                key={dropdownItem.name}
-                                                href={dropdownItem.href}
-                                                className={classNames(
-                                                    dropdownItem.current ? 'bg-gray-900 text-purple' : 'text-black hover:bg-gray-700 hover:text-purple',
-                                                    'block py-2 rounded-md text-base font-medium'
-                                                )}
-                                                aria-current={dropdownItem.current ? 'page' : undefined}
-                                            >
-                                                {dropdownItem.name}
-                                            </Link>
-                                        ))}
-                                    </div>
+        <div className="rounded-md w-full">
+            <button onClick={toggleMenu} className="bg-navyblue w-full text-white border border-purple font-medium py-2 px-4 rounded md:hidden">
+                Menu
+            </button>
+            <div className={`flex-1 space-y-4 py-1 md:block ${isMenuOpen ? 'block' : 'hidden'}`}>
+                <div className="space-y-1 px-5 pt-2 pb-3">
+                    {navigation.map((item) => (
+                        <div key={item.name}>
+                            <Link
+                                href={item.href}
+                                className={classNames(
+                                    item.current ? 'bg-gray-900 text-purple' : 'text-black hover:bg-gray-700 hover:text-purple',
+                                    'block py-2 rounded-md text-base font-medium'
                                 )}
-                            </div>
-                        ))}
-                        <div className="mt-4"></div>
-                        <button className="bg-navyblue w-full hover:text-white text-white border border-purple font-medium py-2 px-4 rounded">
-                            Contact
-                        </button>
-                    </div>
+                                aria-current={item.current ? 'page' : undefined}
+                                onClick={() => item.dropdownItems && toggleDropdown(item.name)}
+                            >
+                                {item.name}
+                            </Link>
+                            {item.dropdownItems && dropdownStates[item.name] && (
+                                <div className="pl-4 space-y-1">
+                                    {item.dropdownItems.map((dropdownItem) => (
+                                        <Link
+                                            key={dropdownItem.name}
+                                            href={dropdownItem.href}
+                                            className={classNames(
+                                                dropdownItem.current ? 'bg-gray-900 text-purple' : 'text-black hover:bg-gray-700 hover:text-purple',
+                                                'block py-2 rounded-md text-base font-medium'
+                                            )}
+                                            aria-current={dropdownItem.current ? 'page' : undefined}
+                                        >
+                                            {dropdownItem.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                    <div className="mt-4"></div>
+                    <button className="bg-navyblue w-full hover:text-white text-white border border-purple font-medium py-2 px-4 rounded">
+                        Contact
+                    </button>
                 </div>
             </div>
         </div>

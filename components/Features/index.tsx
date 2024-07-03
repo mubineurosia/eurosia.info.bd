@@ -41,13 +41,13 @@ const featuresData: FeaturesData[] = [
 
 const Features = () => {
     return (
-        <div className="mx-auto max-w-7xl my-0 md:my-40 pt-36 px-6 relative" id="features-section">
+        <div className="mx-auto max-w-7xl my-0 md:my-40  px-4 md:px-6 relative" id="features-section">
             <div className="radial-bg hidden lg:block"></div>
-            <div className="grid lg:grid-cols-2 gap-x-4 gap-y-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Column-1 */}
-                <div>
-                    <h3 className="feature-font text-lg font-semibold mb-4 text-center md:text-start">Packages</h3>
-                    <h2 className="text-offwhite text-3xl lg:text-5xl font-semibold leading-snug mb-6 text-center md:text-start">
+                <div className="text-center md:text-start mb-6 md:mb-0">
+                    <h3 className="feature-font text-lg font-semibold mb-4">Packages</h3>
+                    <h2 className="text-offwhite text-3xl lg:text-5xl font-semibold leading-snug mb-6">
                         Choose a package which suits you best
                     </h2>
                 </div>
@@ -55,7 +55,7 @@ const Features = () => {
                 <div>
                     <Swiper
                         modules={[Navigation, Pagination]}
-                        spaceBetween={30}
+                        spaceBetween={20}
                         slidesPerView={1}
                         breakpoints={{
                             640: { slidesPerView: 1 },
@@ -68,12 +68,12 @@ const Features = () => {
                     >
                         {featuresData.map((item, i) => (
                             <SwiperSlide key={i}>
-                                <div className="bg-blue py-10 pr-12 pl-6 rounded-lg">
-                                    <div className="rounded-full gg h-16 w-16 flex items-center justify-center mb-10">
+                                <div className="bg-blue py-6 px-4 lg:py-8 lg:px-8 rounded-lg">
+                                    <div className="rounded-full gg h-16 w-16 flex items-center justify-center mb-4 lg:mb-6">
                                         <Image src={item.imgSrc} alt={item.imgSrc} width={24} height={30} />
                                     </div>
-                                    <h5 className="text-offwhite text-lg font-medium mb-4">{item.heading}</h5>
-                                    <h4 className="text-red text-lg font-normal ">{item.price}</h4>
+                                    <h5 className="text-offwhite text-lg font-medium mb-2 lg:mb-4">{item.heading}</h5>
+                                    <h4 className="text-red text-lg font-normal mb-2 lg:mb-4">{item.price}</h4>
                                     <p className="text-lightblue text-sm font-normal">{item.subheading}</p>
                                 </div>
                             </SwiperSlide>
