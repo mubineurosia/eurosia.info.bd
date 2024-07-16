@@ -11,7 +11,6 @@ export default function OurCompany() {
 
       <main className="bg-black text-white py-16">
         <OurCompanys />
-      
       </main>
     </div>
   )

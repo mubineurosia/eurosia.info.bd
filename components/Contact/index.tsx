@@ -1,23 +1,23 @@
 // components/ContactForm.tsx
-import { useState, ChangeEvent, FormEvent } from 'react'
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
-  })
+  });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
-  }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log('Form data:', formData)
-  }
+    console.log('Form data:', formData);
+  };
 
   return (
     <div className="bg-black text-black py-16">
@@ -36,7 +36,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="block w-full px-4 py-2 bg-gray-900  border border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                className="block w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
               />
             </div>
           </div>
@@ -52,7 +52,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="block w-full px-4 py-2 bg-gray-900  border border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                className="block w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 rows={4} // This should be a number
-                className="block w-full px-4 py-2 bg-gray-900  border border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                className="block w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
               ></textarea>
             </div>
           </div>
@@ -83,7 +83,7 @@ const ContactForm = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

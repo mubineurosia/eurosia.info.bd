@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <div className="text-white font-Poppins mx-auto px-6 py-16">
 
@@ -16,7 +16,7 @@ const About: React.FC = () => {
       </section>
 
       {/* History Section */}
-      <section className="container mb-12 flex flex-col lg:flex-row p-2 items-center lg:items-start shadow mx-auto px-6 py-16 ">
+      <section className="container mb-12 flex flex-col lg:flex-row p-2 items-center lg:items-start shadow mx-auto px-6 py-16">
         <div className="lg:w-2/3 mb-8 lg:mb-0 lg:pr-8">
           <h2 className="text-3xl lg:text-4xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#eaaaff] via-[#b5acff] to-[#b5acff]">
             History

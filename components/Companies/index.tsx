@@ -26,8 +26,7 @@ const data: Data[] = [
     {
         imgSrc: "/images/Companies/tree.jpg"
     },
-]
-
+];
 
 // CAROUSEL SETTINGS
 export default class MultipleItems extends Component {
@@ -74,7 +73,6 @@ export default class MultipleItems extends Component {
         };
 
         return (
-
             <div className='text-center bg-lightpink' >
                 <div className="mx-auto max-w-2xl py-16 px-4s sm:px-6 lg:max-w-7xl lg:px-8">
                     <div>
@@ -88,7 +86,6 @@ export default class MultipleItems extends Component {
                     </div>
                 </div>
             </div>
-
         )
     }
 }
